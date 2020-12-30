@@ -32,7 +32,7 @@ const Authors = (props) => {
 
     const authors = result.data.allAuthors
     const authorsOptions = authors.map(a => ({
-        value:a.name,
+        value: a.name,
         label: a.name
     }))
     return (
