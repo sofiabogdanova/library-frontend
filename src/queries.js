@@ -82,4 +82,13 @@ query booksByGenre($genre: String!){
     genres
   }
 }
-    `
+`
+
+export const BOOK_ADDED = gql`
+subscription {
+  bookAdded{
+    title
+    genres
+  }
+}
+`

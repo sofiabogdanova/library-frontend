@@ -12,38 +12,10 @@ const Recommendation = (props) => {
             genre: genre
         }
     })
-    // useEffect(() => {
-    //     setBooks([{
-    //         title: 'title',
-    //         author: {
-    //             name: 'author'
-    //         },
-    //         published: 1992
-    //     }])
-    //     /*return
-    //     if (result.data) {
-    //         const filteredBooks = result.data.allBooks
-    //         setBooks(filteredBooks)
-    //         console.log(books)
-    //     }*/
-    // }, [result])
-    // const { data } = useQuery(BOOKS_BY_GENRE, {
-    //     variables: {
-    //         genre: genre
-    //     },
-    //     onCompleted: data => setBooks(data.allBooks)
-    // })
-
 
     if (!props.show || !props.genre) {
         return null
     }
-
-    // if (books.length === 0) {
-    //     // lazy query
-    //     getResult({variables: {genre: genre}})
-    // }
-
 
     return (
         <div>
@@ -57,7 +29,6 @@ const Recommendation = (props) => {
                 </tr>
                 {genre ? (
                     data?.allBooks
-                        // .filter((book) => book.genres.includes(genre))
                         .map((a) => (
                             <tr key={a.title}>
                                 <td>{a.title}</td>
